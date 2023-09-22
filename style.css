@@ -1,0 +1,65 @@
+body {
+    background-color: #222222;
+}
+
+/* Apply basic styling to the calculator container */
+.calculator {
+    display: grid;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 20px;
+    border: 0px solid #000000;
+    border-radius: 10px;
+    background-color: #232323;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the calculator display */
+.display {
+    width: 96%;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    border: 1px solid rgb(114, 125, 82);
+    border-radius: 6px;
+    background-color: rgb(110, 120, 79);
+    text-align: right;
+    box-shadow: 0 0 9px rgb(110, 120, 79);
+}
+
+/* Style the buttons */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.buttons button {
+    width: 100%;
+    padding: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    border: 1px solid #575757;
+    border-radius: 6px;
+    background-color: #5c5c5c;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    color: rgb(231, 231, 231);
+    cursor: pointer;
+}
+
+/* Style the "=" button differently */
+.buttons button[value="="] {
+    color: white;
+    font-weight: bold;
+}
+
+/* Style the "C" button differently */
+.buttons button[value="C"] {
+    grid-column: span 4;
+    width: 300px;
+    background-color: #ff9800;
+    color: white;
+    font-weight: bold;
+}

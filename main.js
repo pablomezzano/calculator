@@ -11,7 +11,10 @@ buttons.forEach((button) => {
     // Handle different button types (numbers, operators, clear, calculate)
     if (buttonText === "=") {
       try {
-        let expression = display.value.replace(/×/g, "*").replace(/÷/g, "/"); // Reemplaza "×" con "*", Reemplaza "÷" con "/"
+        let expression = display.value
+          .replace(/×/g, "*")
+          .replace(/÷/g, "/")
+          .replace(/−/g, "-"); // Reemplaza "×" con "*", Reemplaza "÷" con "/"
         display.value = eval(expression);
       } catch (error) {
         display.value = "Error";
@@ -28,7 +31,7 @@ buttons.forEach((button) => {
           : buttonValue === "divide"
           ? "÷"
           : buttonValue === "split"
-          ? "-"
+          ? "−"
           : buttonValue;
     } else {
       display.value += buttonText;

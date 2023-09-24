@@ -49,6 +49,11 @@ body {
     cursor: pointer;
 }
 
+.buttons button:active {
+    background-color: #282828;
+    border: 0px
+}
+
 /* Style the "=" button differently */
 .buttons button[value="="] {
     color: white;
@@ -62,4 +67,8 @@ body {
     background-color: #ff9800;
     color: white;
     font-weight: bold;
+}
+
+.buttons button[value="C"]:active {
+    background-color: #b36b00;
 }
